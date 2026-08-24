@@ -182,6 +182,8 @@ environment:
 | `environment.data.AZURE_ENTRA_TENANT_ID` | string | `""` | Azure Entra tenant ID (used when `AZURE_AUTH_MODE=entra`) |
 | `environment.data.AZURE_STORAGE_ACCOUNT` | string | `""` | Azure storage account name |
 | `environment.data.AZURE_STORAGE_CONTAINER` | string | `""` | Azure storage container name |
+| `environment.data.GCP_AUTH_MODE` | string | `""` | GCP authentication mode (`workload`). Required for both GCS log storage and Vertex AI workload identity |
+| `environment.data.GCP_WIF_AUDIENCE` | string | `""` | Workload Identity Federation audience (used with `GCP_AUTH_MODE=workload` outside GKE; when unset the GKE metadata server is used) |
 | `environment.data.CACHE_STORE` | string | `"redis"` | Cache storage backend (minimum Redis version: 6.2) |
 | `environment.data.REDIS_URL` | string | `"redis://redis:6379"` | Redis connection URL (consider using secretKeys if contains auth) |
 | `environment.data.REDIS_TLS_ENABLED` | string | `"false"` | Enable TLS for Redis connection |

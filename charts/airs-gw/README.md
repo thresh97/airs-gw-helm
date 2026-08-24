@@ -42,6 +42,14 @@ kubectl get pods -n airs-gw
 kubectl port-forward <pod-name> -n airs-gw 8787:8787
 ```
 
+### 6. Configure Provider Authentication (Optional)
+
+Providers that authenticate with cloud IAM rather than a static key need setup
+on both the integration and the gateway deployment:
+
+- **AWS Bedrock** — See [Bedrock Assumed Role Configuration](./docs/Bedrock.md)
+- **Google Vertex AI** — See [Vertex AI Workload Identity](./docs/VertexAI.md)
+
 ## Data Service (Optional)
 
 Enable data service for 
